@@ -217,13 +217,20 @@ Word wise Validation Accuracy = **41.35%**
 
 The Best Model is then tested over the given Test Samples.
 
-Word Wise Test Accuracy = 
+Word Wise Test Accuracy = **41.02%**
 
 ### Visualisation:
+
+There are two Visualizations in this part of the case study.
+
+1. We have visualized a Grid for some random 20 samples from the test dataset and the Input, Target and Predicted Sequences have been plotted.
+
+2. Attention Heatmaps are being visualized for 10 random samples from the test data.
 
 ## 3. Visualization of Connectivity in Inter/Intra Sequences:
 
 ## 4. Lyrics Generation using GPT2 given a specific string:
+
 In this part we had to fine tune the GPT2 model to generate the lyrics of english songs.
 
 ### Dataset
@@ -241,6 +248,3 @@ However, make sure you have entered the file location of merged_file.txt properl
 
 ### Conclusion:-
 Using this we were able to fine tune the GPT-2 and generate the lyrics for the engisg songs
-
-
-
