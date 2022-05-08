@@ -120,6 +120,92 @@ Word Wise Test Accuracy = **37.09%**
 
 For this part we have visualized a Grid for some random 20 samples from the test dataset and the Input, Target and Predicted Sequences have been plotted.
 
+### Run Time Environment in the Command Line:
+
+Please place the Dakshina Dataset(./dakshina_dataset_v1.0/) into the same folder where the **Command_Line_Run_RNN_Model.py** will be downloaded.
+
+Then Please go through the below demo to run the same.
+
+```
+(base) C:\Users\joyoj\OneDrive\Desktop\DL_Final_Code>python Command_Line_Run_RNN_Model.py
+2022-05-08 18:08:48.526961: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-05-08 18:08:48.527140: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2022-05-08 18:08:53.614180: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-08 18:08:53.617522: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2022-05-08 18:08:53.617633: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2022-05-08 18:08:53.622606: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: JoysDevice
+2022-05-08 18:08:53.622790: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: JoysDevice
+
+Target Language: Bangla, Code: bn
+Target Language: Gujarati, Code: gu
+Target Language: Hindi, Code: hi
+Target Language: Kannada, Code: kn
+Target Language: Malayalam, Code: ml
+Target Language: Marathi, Code: mr
+Target Language: Punjabi, Code: pa
+Target Language: Sindhi, Code: sd
+Target Language: Sinhala, Code: si
+Target Language: Tamil, Code: ta
+Target Language: Telugu, Code: te
+Target Language: Urdu, Code: ur
+Please Enter the Target Language Code: hi
+Number of Training samples: 44204
+Number of Validation samples: 4358
+Number of Test samples: 4502
+Number of unique input tokens: 27
+Number of unique output tokens: 66
+Max sequence length for inputs: 20
+Max sequence length for outputs: 21
+Model Building...
+Hidden Layer Size (128,256,..): 64
+Number of Encoder Layers (1,2,3,..): 1
+Number of Decoder Layers (1,2,3,..): 1
+Learning Rate (0.001,0.0001,..): 0.001
+Optimizer ('adam','nadam','rmsprop'): adam
+Batch Size (64,128,...): 128
+Model Name ('LSTM','RNN','GRU'): LSTM
+Embedding Size (64,128,...): 64
+Dropouts (0.1,0.2,..): 0.3
+Number of Epochs (10,20,...): 5
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to
+==================================================================================================
+ input_1 (InputLayer)           [(None, None)]       0           []
+
+ input_2 (InputLayer)           [(None, None)]       0           []
+
+ embedding (Embedding)          (None, None, 64)     1728        ['input_1[0][0]']
+
+ embedding_1 (Embedding)        (None, None, 64)     4224        ['input_2[0][0]']
+
+ lstm (LSTM)                    [(None, None, 64),   33024       ['embedding[0][0]']
+                                 (None, 64),
+                                 (None, 64)]
+
+ lstm_1 (LSTM)                  [(None, None, 64),   33024       ['embedding_1[0][0]',
+                                 (None, 64),                      'lstm[0][1]',
+                                 (None, 64)]                      'lstm[0][2]']
+
+ dense (Dense)                  (None, None, 66)     4290        ['lstm_1[0][0]']
+
+==================================================================================================
+Total params: 76,290
+Trainable params: 76,290
+Non-trainable params: 0
+__________________________________________________________________________________________________
+Epoch 1/5
+346/346 [==============================] - 26s 63ms/step - loss: 1.3505 - accuracy: 0.6964 - val_loss: 1.0238 - val_accuracy: 0.7414
+Epoch 2/5
+346/346 [==============================] - 22s 62ms/step - loss: 0.9731 - accuracy: 0.7424 - val_loss: 0.8950 - val_accuracy: 0.7578
+Epoch 3/5
+346/346 [==============================] - 21s 62ms/step - loss: 0.9069 - accuracy: 0.7544 - val_loss: 0.8429 - val_accuracy: 0.7703
+Epoch 4/5
+346/346 [==============================] - 21s 62ms/step - loss: 0.8516 - accuracy: 0.7668 - val_loss: 0.7835 - val_accuracy: 0.7818
+Epoch 5/5
+346/346 [==============================] - 22s 62ms/step - loss: 0.7796 - accuracy: 0.7834 - val_loss: 0.6955 - val_accuracy: 0.8042
+```
 
 
 ## 2. Building and Training a RNN Based Attention Model using the Google Dakshina Dataset
