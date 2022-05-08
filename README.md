@@ -217,16 +217,30 @@ Word wise Validation Accuracy = **41.35%**
 
 The Best Model is then tested over the given Test Samples.
 
-Word Wise Test Accuracy = **41.02%**
+Word Wise Test Accuracy = 
 
 ### Visualisation:
-
-There are two Visualizations in this part of the case study.
-
-1. We have visualized a Grid for some random 20 samples from the test dataset and the Input, Target and Predicted Sequences have been plotted.
-
-2. Attention Heatmaps are being visualized for 10 random samples from the test data.
 
 ## 3. Visualization of Connectivity in Inter/Intra Sequences:
 
 ## 4. Lyrics Generation using GPT2 given a specific string:
+In this part we had to fine tune the GPT2 model to generate the lyrics of english songs.
+
+### Dataset
+For fine tuning we have used the dataset2(https://www.kaggle.com/paultimothymooney/poetry) provided in the question. 
+
+The dataset consists of the multiple text files where each text file contained all the songs of a particular artist.
+We have merged all the files provided in dataset2 into one single text file named "merged_file.txt".
+
+We have uploaded the merged_file.txt and code for fine tuning GPT-2 into the folder "Question 8 GPT-2".
+
+### Running the code:-
+For Running the code you can run all the cells of the notebook line by line.
+The GPT-2 model will get fine tuned for generating the lyrics of the english songs.
+However, make sure you have entered the file location of merged_file.txt properly and file location for creating new files for train.txt and eval.txt
+
+### Conclusion:-
+Using this we were able to fine tune the GPT-2 and generate the lyrics for the engisg songs
+
+
+
