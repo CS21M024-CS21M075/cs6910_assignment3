@@ -1,5 +1,7 @@
 # Brief Introduction to CS6910 - Deep Learning Assignment 3
 
+### Submitted by CS21M024: Joyojyoti Acharya, CS21M075: Vrushab Ramesh Karia
+
 The Assignment consists of 4 Major Parts as follows:
 
 1. Building and Training a RNN Based Vanilla Model using the Google Dakshina Dataset
@@ -10,11 +12,23 @@ The Assignment consists of 4 Major Parts as follows:
 
 4. Lyrics Generation using GPT2 given a specific string.
 
-The link to the wandb report:
+The link to the wandb report: https://wandb.ai/cs21m024_cs21m075/CS6910-Assignment-3/reports/-CS6910-Deep-Learning-Assignment-3--VmlldzoxODc4NjQ1?accessToken=m9iw3r5s7u6qzg5m6eij9sqt84l1r3712qxbiqsos0b09uf22qxu7igcrb6uopkl
 
 ## 1.Building and Training a RNN Based Vanilla Model using the Google Dakshina Dataset:
 
 ### Files associated:
+
+1. DL_assignment3.ipynb                                 ~ Basic code structure of Encoder-Decoder Model
+
+2. DL_Assignment3_Vanilla_Wandb_Run.ipynb               ~ Wandb Hyper Parameter Tuning
+
+3. DL_Assignment3_Vanilla_Best_Model_Train_Test.ipynb   ~ Model on Best Parameter
+
+4. Command_Line_Run_RNN_Model.py                        ~ Command Line python code for offline runs
+
+5. ./predictions_vanilla/predictions_vanilla.csv        ~ Contains Test Data on Vanilla Model
+
+6. Prediction_Vanilla_Visualization.ipynb               ~ Test Prediction Sample Visualization
 
 ### Model:
 
@@ -212,6 +226,18 @@ Epoch 5/5
 
 ### Files associated:
 
+1. DL_Assignment3_Attention_Wandb_Run.ipynb                             ~ Attention Based Model Wandb Run
+
+2. DL_Assignment3_Attention_Best_Model_Train_Test.ipynb                 ~ Attention Based Best Model Run
+
+3. Prediction_Attention_Visualization.ipynb                             ~ Test Samples Visualization - Attention Model
+
+4. ./predictions_attention/predictions_attention.csv                    ~ Test Data Prediction - Attention Model
+
+5. Attention_Vanilla_Prediction_Comparison.ipynb                        ~ Comparison Between Attention and Vanilla Model
+
+6. nirmala.ttf                                                          ~ Font used in Attention Heatmap Plots
+
 ### Model:
 
 The Attention Based RNN Based Model is made using Only Single Layer of Encoder and another one Layer of Decoder, along with that the Attention Layer and Dense Layer is being used in the Output. The output is basically the whole vocabulary of the Corpus.
@@ -315,7 +341,17 @@ There are two Visualizations in this part of the case study.
 
 ## 3. Visualization of Connectivity in Inter/Intra Sequences:
 
+1. DL_Assignment3_Q6_Connectivity.ipynb                             ~ Python Code for Connectivity Visualization
+
+We have visualized the different connections between input and target sequences by this part of the code.
+
+In the Attention Model we saved the Attention Scores via the file "connectivity_visualization.txt". We used the same file to start the visualization in this part of the code.
+
 ## 4. Lyrics Generation using GPT2 given a specific string:
+
+### Files/Folders Associated:
+
+1. ./Question 8 GPT-2                                               ~ Python Code for GPT-2
 
 In this part we had to fine tune the GPT2 model to generate the lyrics of english songs.
 
