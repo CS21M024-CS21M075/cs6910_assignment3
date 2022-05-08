@@ -217,10 +217,15 @@ Word wise Validation Accuracy = **41.35%**
 
 The Best Model is then tested over the given Test Samples.
 
-Word Wise Test Accuracy = 
+Word Wise Test Accuracy = **41.02%**
 
 ### Visualisation:
 
+There are two Visualizations in this part of the case study.
+
+1. We have visualized a Grid for some random 20 samples from the test dataset and the Input, Target and Predicted Sequences have been plotted.
+
+2. Attention Heatmaps are being visualized for 10 random samples from the test data.
 
 ## 3. Visualization of Connectivity in Inter/Intra Sequences:
 
